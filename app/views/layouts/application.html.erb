@@ -15,15 +15,12 @@
 
 <body>
 
-<% if current_page?('/') %>
-	<div data-role="page" data-theme="b">
-<% else %>
-	<div data-role="page" data-theme="a">
-		<div data-role="header" data-position="inline">
-			<%= link_to 'Back', :back, 'data-icon' => 'arrow-l' %>
-			<h1><%= @title %></h1>
-		</div><!-- /header -->
-<% end %>
+<div data-role="page" data-theme="a">
+
+	<div data-role="header" data-position="inline">
+		<%= link_to 'Back', :back, 'data-icon' => 'arrow-l' %>
+		<h1><%= @title %></h1>
+	</div><!-- /header -->
 
 	<div data-role="content">
 		<%= yield %>
