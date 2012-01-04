@@ -1,6 +1,6 @@
 ImagineSetupApp::Application.routes.draw do
-	get "pages/splash"
-	get "pages/home"
+	# get "pages/splash"
+	# get "pages/home"
 
 	match '/home', :to => 'pages#home'
 	root :to => 'pages#splash'
