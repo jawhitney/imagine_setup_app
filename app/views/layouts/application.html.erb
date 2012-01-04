@@ -1,14 +1,35 @@
 <!DOCTYPE html>
+
 <html>
+
 <head>
-  <title>ImagineSetupApp</title>
-  <%= stylesheet_link_tag    "application" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
+	<title>Imagine Setup App</title>
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" />
+	<%= stylesheet_link_tag    "application" %>
+	<%= javascript_include_tag "application" %>
+	<%= csrf_meta_tags %>
+	<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js"></script>
 </head>
+
 <body>
 
-<%= yield %>
+<% if current_page?('/') %>
+	<div data-role="page" data-theme="b">
+<% else %>
+	<div data-role="page" data-theme="a">
+		<div data-role="header" data-position="inline">
+			<%= link_to 'Back', :back, 'data-icon' => 'arrow-l' %>
+			<h1><%= @title %></h1>
+		</div><!-- /header -->
+<% end %>
+
+	<div data-role="content">
+		<%= yield %>
+	</div><!-- /content -->
+
+</div><!-- /page -->
 
 </body>
+
 </html>

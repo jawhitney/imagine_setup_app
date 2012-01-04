@@ -5,3 +5,17 @@
  *= require_self
  *= require_tree . 
 */
+
+.center-align {
+	text-align: center;
+}
+
+/* Splash page */
+div#splash-logo {
+}
+
+div#splash-content {
+}
+
+div#splash-button {
+}
