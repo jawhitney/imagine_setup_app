@@ -17,11 +17,10 @@
 <body>
 
 <% if current_page?('/') %>
-	<div data-role="page" data-theme="b">
-<% else %>
 	<div data-role="page" data-theme="a">
+<% else %>
+	<div data-role="page" data-theme="a" data-add-back-btn="true">
 		<div data-role="header" data-position="inline">
-			<%= link_to 'Back', :back, 'data-icon' => 'arrow-l' %>
 			<h1><%= @title %></h1>
 		</div><!-- /header -->
 <% end %>
